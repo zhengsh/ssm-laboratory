@@ -1,0 +1,18 @@
+server:
+  port: 8501
+
+spring:
+  application:
+    name: order-service
+  cloud:
+    consul:
+      host: 39.98.223.198
+      port: 18500
+      discovery:
+        service-name: ${spring.application.name}
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/ssm?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root123

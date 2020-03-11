@@ -1,0 +1,43 @@
+server:
+  port: 8101
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: order-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/ssm?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root123
+
+eureka:
+  instance:
+    instance-id: order-8101
+    prefer-ip-address: true
+  client:
+    # 表示是否将自己注册进 EurekaServer 默认为 true
+    register-with-eureka: true
+    # 是否从 EurekaServer 抓取已有的注册信息，默认为 true. 单节点无所谓，集群必须设置为 true，才能配置 ribbon 使用负载均衡
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+
+
+#feign:
+#  hystrix:
+#    enabled: true
+
+# 设置 feign 客户端超时时间（OpenFeign 默认支持 ribbon）
+ribbon:
+  # 值的是建立链接所用的时间，适用于网络状况正常的情况下， 两端链接所用的时间
+  ReadTimeout: 5000
+  # 指的是建立链接后从服务器读取可用资源所用的时间
+  ConectTimeout: 5000
+
+logging:
+  level:
+    # feign 日志以什么级别监控什么接口
+    cn.edu.cqvie.order.service.PaymentFeignService: debug
