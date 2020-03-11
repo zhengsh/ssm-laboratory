@@ -31,3 +31,4 @@ eureka:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: cn.edu.cqvie.payment.domain
+

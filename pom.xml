@@ -18,6 +18,8 @@
         <module>order-service-zk</module>
         <module>payment-service-consul</module>
         <module>order-service-consul</module>
+        <module>hystrix-dashboard</module>
+        <module>gateway-service</module>
     </modules>
 
     <properties>

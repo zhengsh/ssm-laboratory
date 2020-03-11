@@ -26,9 +26,9 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
 
 
-#feign:
-#  hystrix:
-#    enabled: true
+feign:
+  hystrix:
+    enabled: true
 
 # 设置 feign 客户端超时时间（OpenFeign 默认支持 ribbon）
 ribbon:
