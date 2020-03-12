@@ -4,6 +4,18 @@ server:
 spring:
   application:
     name: payment-service
+  cloud:
+    # Config 客户端配置
+    config:
+      # 分支名称
+      label: master
+      # 配置文件名称
+      name: config
+      # 读取后缀名称，上述3个综合， 分支上 config-dev.yml 的配置文件读取
+      # http://config3344.com/master/config-dev.yml
+      profile: dev
+      # 配置中心地址
+      uri: http://config3344.com:3344
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver

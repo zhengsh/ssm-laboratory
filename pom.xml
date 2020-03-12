@@ -20,6 +20,7 @@
         <module>order-service-consul</module>
         <module>hystrix-dashboard</module>
         <module>gateway-service</module>
+        <module>config-service</module>
     </modules>
 
     <properties>
