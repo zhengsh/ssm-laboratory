@@ -1,0 +1,7 @@
+server:
+  port: 8701
+
+
+spring:
+  application:
+    name: stream-pro

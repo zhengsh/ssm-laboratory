@@ -21,6 +21,8 @@
         <module>hystrix-dashboard</module>
         <module>gateway-service</module>
         <module>config-service</module>
+        <module>stream-rabbitmq-provider</module>
+        <module>stream-rabbitmq-consumer</module>
     </modules>
 
     <properties>

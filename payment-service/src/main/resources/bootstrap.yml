@@ -4,11 +4,16 @@ server:
 spring:
   application:
     name: payment-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     # Config 客户端配置
     config:
       # 分支名称
-      label: master
+      label: dev
       # 配置文件名称
       name: config
       # 读取后缀名称，上述3个综合， 分支上 config-dev.yml 的配置文件读取
@@ -43,4 +48,12 @@ eureka:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: cn.edu.cqvie.payment.domain
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 
