@@ -31,6 +31,7 @@ eureka:
     lease-renewal-interval-in-seconds: 1
     # Eureka 服务端在收到最后一次心跳后等待时间上限，单位为秒 (默认90秒)，超时将剔除服务
     lease-expiration-duration-in-seconds: 2
+    instance-id: stream-provider-8701
   client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/

@@ -25,4 +25,10 @@ public class OrderFeignController {
         // openfeign 默认1秒钟超时
         return paymentFeignService.paymentFeignTimeout();
     }
+
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin() {
+        // openfeign 默认1秒钟超时
+        return paymentFeignService.paymentZipkin();
+    }
 }

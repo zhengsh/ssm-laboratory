@@ -6,6 +6,12 @@ spring:
     allow-bean-definition-overriding: true
   application:
     name: order-service
+  zipkin:
+    base-url: http://localhost:9411
+    seluth:
+      sampler:
+        # 采样值介于 0-1 之间 1 表示全部采集
+        probability: 1
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver

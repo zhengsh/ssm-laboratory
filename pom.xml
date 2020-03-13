@@ -23,6 +23,8 @@
         <module>config-service</module>
         <module>stream-rabbitmq-provider</module>
         <module>stream-rabbitmq-consumer</module>
+        <module>payment-service-nacos</module>
+        <module>order-service-nacos</module>
     </modules>
 
     <properties>
@@ -65,11 +67,10 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.1.0.RELEASE</version>
+                <version>2.2.0.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
