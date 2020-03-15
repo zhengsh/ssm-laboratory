@@ -8,7 +8,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableDiscoveryClient
 @EnableFeignClients
-// 取消数据源自动创建
 @SpringBootApplication
 public class SeataStorageApplication {
 

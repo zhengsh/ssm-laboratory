@@ -5,6 +5,7 @@ import cn.edu.cqvie.order.domain.Order;
 import cn.edu.cqvie.order.service.AccountService;
 import cn.edu.cqvie.order.service.OrderService;
 import cn.edu.cqvie.order.service.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private StorageService storageService;
 
-    @Transactional
+    @GlobalTransactional(name = "fsp-create-order", rollbackFor = Exception.class)
     @Override
     public void create(Order order) {
         log.info("====> 开始创建订单: {}", order);
