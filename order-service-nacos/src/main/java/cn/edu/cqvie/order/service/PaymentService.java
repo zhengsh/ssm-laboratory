@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(value = "PAYMENT-SERVICE-NACOS", fallback = PaymentFallbackService.class)
+@FeignClient(value = "payment-service-nacos", fallback = PaymentFallbackService.class)
 public interface PaymentService {
 
     @GetMapping("/paymentSQL/{id}")
