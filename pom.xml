@@ -25,6 +25,9 @@
         <module>stream-rabbitmq-consumer</module>
         <module>payment-service-nacos</module>
         <module>order-service-nacos</module>
+        <module>seata-order-service</module>
+        <module>seata-storage-service</module>
+        <module>seata-account-service</module>
     </modules>
 
     <properties>
