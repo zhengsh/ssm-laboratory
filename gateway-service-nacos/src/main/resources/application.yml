@@ -14,13 +14,13 @@ spring:
         locator:
           # 开启从注册中心动态创建路由的功能， 利用微服务名进行路由、
           enabled: true
-      routes:
-        # payment_routh 路由ID ， 没有固定的规则但是要求唯一，建议配合服务名
-        - id: payment_routh
-          # 匹配提供服务的路由地址
-          uri: lb://PAYMENT-SERVICE-NACOS
-          predicates:
-            - Path=/payment/**
+#      routes:
+#        # payment_routh 路由ID ， 没有固定的规则但是要求唯一，建议配合服务名
+#        - id: payment_routh
+#          # 匹配提供服务的路由地址
+#          uri: lb://PAYMENT-SERVICE-NACOS
+#          predicates:
+#            - Path=/payment/**
 #        # payment_routh 路由ID ， 没有固定的规则但是要求唯一，建议配合服务名
 #        - id: payment_routh2
 #          # 匹配提供服务的路由地址
