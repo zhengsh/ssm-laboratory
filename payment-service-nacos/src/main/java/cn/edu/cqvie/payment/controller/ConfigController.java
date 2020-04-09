@@ -11,7 +11,7 @@ import org.springframework.web.context.annotation.RequestScope;
 @RequestScope
 public class ConfigController {
 
-    @Value("${config.info}")
+    @Value("${config.info:hahha}")
     private String configInfo;
 
     @GetMapping("/config/info")

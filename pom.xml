@@ -28,6 +28,7 @@
         <module>seata-order-service</module>
         <module>seata-storage-service</module>
         <module>seata-account-service</module>
+        <module>gateway-service-nacos</module>
     </modules>
 
     <properties>

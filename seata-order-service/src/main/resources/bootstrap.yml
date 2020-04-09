@@ -9,3 +9,23 @@ spring:
       config:
         server-addr: 192.168.1.3:8848
         file-extension: yaml
+
+#seata:
+#  enabled: true
+#  tx-service-group: fsp_tx_group
+#  registry:
+#    type: nacos
+#    nacos:
+#      server-addr: 192.168.1.3:8848
+#  client:
+#    support:
+#      spring:
+#        datasource-autoproxy: false
+#  service:
+#    disable-global-transaction: false
+#  config:
+#    type: nacos
+#    nacos:
+#      server-addr: 192.168.1.3
+#  service:
+#    grouplist: 192.168.1.3:8091

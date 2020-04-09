@@ -1,0 +1,42 @@
+server:
+  port: 8501
+
+spring:
+  application:
+    name: gateway-nacos-service
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册中心地址
+        server-addr: 192.168.1.4:8848
+    gateway:
+      discovery:
+        locator:
+          # 开启从注册中心动态创建路由的功能， 利用微服务名进行路由、
+          enabled: true
+      routes:
+        # payment_routh 路由ID ， 没有固定的规则但是要求唯一，建议配合服务名
+        - id: payment_routh
+          # 匹配提供服务的路由地址
+          uri: lb://PAYMENT-SERVICE-NACOS
+          predicates:
+            - Path=/payment/**
+#        # payment_routh 路由ID ， 没有固定的规则但是要求唯一，建议配合服务名
+#        - id: payment_routh2
+#          # 匹配提供服务的路由地址
+#          uri: lb://PAYMENT-SERVICE
+#          predicates:
+#            # 断言，路径相匹配的进行路由
+#            - Path=/payment/lb/**
+#            - After=2020-03-11T21:19:20.732+08:00[Asia/Shanghai]
+#            # 测试 curl http://localhost:8501/payment/lb --cookie "username=zhangsan"
+#            - Cookie=username, zhangsan
+#            # 测试 curl http://localhost:8501/payment/lb -H "X-Request-Id:123" --cookie "username=zhangsan"
+#            - Header=X-Request-Id, \d+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

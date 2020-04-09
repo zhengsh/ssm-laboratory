@@ -3,22 +3,22 @@ spring:
     nacos:
       discovery:
         # 服务注册中心地址
-        server-addr: 192.168.1.3:8848
+        server-addr: 192.168.1.4:8848
     sentinel:
       enabled: true
       transport:
         # 默认8719, 如果被占用了会自动从8719开始一次+1, 直至找到未被占用的端口为止
         port: 8719
         # sentinel dashboard d地址
-        dashboard: 192.168.1.3:8080
-      datasource:
-        ds1:
-          nacos:
-            server-addr: 192.168.1.3:8848
-            dataId: payment-service-nacos
-            groupId: DEFAULT_GROUP
-            data-type: json
-            rule-type: flow
+        dashboard: 192.168.1.4:8080
+#      datasource:
+#        ds1:
+#          nacos:
+#            server-addr: 192.168.1.3:8848
+#            dataId: payment-service-nacos
+#            groupId: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: flow
   profiles:
     active: dev
   datasource:
